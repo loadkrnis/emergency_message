@@ -1,26 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import AppAppBar from './modules/views/AppAppBar';
+import Location from './modules/views/Location'
 
-function App() {
+
+function App(obj) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      // <div>
+      //   {db.map(data => <message num={data.key} sender={data.sender} areas={data.areas} content={data.content} data={data.date}  />)}
+      // </div>
+    <React.Fragment>
+        <AppAppBar />
+        {/*<ProductHero />*/}
+        {/*<ProductValues />*/}
+        <div id="content">
+        <Location/>
+        </div>
+        {/*<ProductCTA />*/}
+        {/*<ProductSmokingHero />*/}
+        {/*<AppFooter />*/}
+    </React.Fragment>
   );
 }
-
 export default App;
